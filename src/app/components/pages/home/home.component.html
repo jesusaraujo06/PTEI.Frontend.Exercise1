@@ -1,0 +1,24 @@
+<div class="container text-center my-5">
+  <h1 class="mb-4">Películas de moda</h1>
+
+  <div class="row g-4">
+    <div class="col" *ngFor="let t of trendingMovieResult">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{ t.title | slice : 0 : 15 }}</mat-card-title>
+          <mat-card-subtitle>{{ t.created | date }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="https://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          title="Img"
+        />
+        <mat-card-content>
+          <p>
+            {{ t.overview | slice : 0 : 100 }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
