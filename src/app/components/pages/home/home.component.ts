@@ -13,10 +13,10 @@ export class HomeComponent {
     private title: Title,
     private meta: Meta
   ) {
-    this.title.setTitle('App Peli');
+    this.title.setTitle('AngularMovies');
     this.meta.updateTag({
       name: 'description',
-      content: 'Peliculas',
+      content: 'AngularMovies',
     });
   }
 
@@ -30,7 +30,6 @@ export class HomeComponent {
     this.service.GetTrendingMovieApiData().subscribe((result) => {
       console.log(result, 'trendingresult#');
       this.trendingMovieResult = result.results;
-      // this.trendingMovieResult
     });
   }
 }

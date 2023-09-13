@@ -1,10 +1,13 @@
-<mat-form-field>
-  <mat-label>Buscar</mat-label>
+<div>
   <input
+    class="form-control me-3"
+    placeholder="Buscar..."
+    aria-label="Buscar"
     matInput
     #inputSearch
     type="text"
     autofocus
     (keyup)="onSearch(inputSearch.value)"
   />
-</mat-form-field>
+  <!-- <button class="btn btn-outline-success" type="button">Buscar...</button> -->
+</div>
