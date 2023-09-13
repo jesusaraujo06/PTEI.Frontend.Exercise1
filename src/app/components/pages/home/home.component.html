@@ -2,20 +2,20 @@
   <h1 class="mb-4">Películas de moda</h1>
 
   <div class="row g-4">
-    <div class="col" *ngFor="let t of trendingMovieResult">
+    <div class="col" *ngFor="let movie of trendingMovieResult">
       <mat-card class="max-width-card">
         <mat-card-header class="py-2">
-          <mat-card-title>{{ t.title | slice : 0 : 15 }}</mat-card-title>
-          <mat-card-subtitle>{{ t.release_date | date }}</mat-card-subtitle>
+          <mat-card-title>{{ movie.title | slice : 0 : 15 }}</mat-card-title>
+          <mat-card-subtitle>{{ movie.release_date | date }}</mat-card-subtitle>
         </mat-card-header>
         <img
           mat-card-image
-          src="https://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}"
           title="Img"
         />
         <mat-card-content>
           <p class="py-2">
-            {{ t.overview | slice : 0 : 100 }}
+            {{ movie.overview | slice : 0 : 100 }}
           </p>
         </mat-card-content>
       </mat-card>

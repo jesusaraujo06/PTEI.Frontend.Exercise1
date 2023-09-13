@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { Movie } from '@app/shared/components/interfaces/movie.interface';
 import { MovieService } from '@app/shared/services/movie.service';
 
 @Component({
@@ -20,7 +21,7 @@ export class HomeComponent {
     });
   }
 
-  trendingMovieResult: any = [];
+  trendingMovieResult: Movie[] = [];
 
   ngOnInit(): void {
     this.trendingData();
