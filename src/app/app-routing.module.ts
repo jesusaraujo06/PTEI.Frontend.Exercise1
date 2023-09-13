@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: '/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
@@ -15,7 +15,7 @@ const routes: Routes = [
   {
     path: 'movie-list',
     loadChildren: () =>
-      import('./components/pages/movies/movie-list/movie-list.module').then(
+      import('./components/pages/movie-list/movie-list.module').then(
         (m) => m.MovieListModule
       ),
   },
