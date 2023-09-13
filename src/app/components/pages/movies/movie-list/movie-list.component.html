@@ -1,1 +1,24 @@
-<p>movie-list works!</p>
+<div class="container text-center py-5">
+  <h1 class="mb-4">Resultados de la busqueda</h1>
+
+  <div class="row g-4">
+    <div class="col" *ngFor="let movie of movies">
+      <mat-card class="max-width-card">
+        <mat-card-header class="py-2">
+          <mat-card-title>{{ movie.title }}</mat-card-title>
+          <mat-card-subtitle>{{ movie.release_date | date }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}"
+          title="Img"
+        />
+        <mat-card-content>
+          <p class="py-2">
+            {{ movie.overview | slice : 0 : 100 }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

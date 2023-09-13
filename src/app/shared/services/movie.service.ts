@@ -18,10 +18,8 @@ export class MovieService {
     );
   }
 
-  getSearchMovie(data: any): Observable<any> {
-    console.log(data, 'movie#');
-    return this.http.get(
-      `${this.baseurl}/search/movie?api_key=${this.apikey}&query=${data.movieName}`
-    );
+  getSearchMovie(query: string = ''): Observable<MovieApiResponse> {
+    const filter = `${this.baseurl}/search/movie?api_key=${this.apikey}&query=${query}`;
+    return this.http.get<MovieApiResponse>(filter);
   }
 }
