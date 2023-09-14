@@ -1,27 +1,70 @@
-# PTEIFrontendExercise1
+# PTEI.Frontend.Exercise1
+## Aplicación web SPA en Angular que consume la API pública: TMDB, a través de peticiones HTTPS.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+## Requisitos
+[NodeJS](https://nodejs.org/es)
 
-## Development server
+[Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Empezar
+Empiece clonando el repositorio
 
-## Code scaffolding
+```bash
+git clone https://github.com/jesusaraujo06/PTEI.Frontend.Exercise1.git
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Diríjase a la ruta donde clonó el repositorio y abra la solución con Visual Studio
 
-## Build
+```bash
+cd your_path
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Instalar dependencias
+```bash
+npm install
+```
 
-## Running unit tests
+## Correr
+```bash
+ng serve --open
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Demostración
 
-## Running end-to-end tests
+![image](https://github.com/jesusaraujo06/PTEI.Frontend.Exercise1/assets/72844628/fd8365b5-cd8a-4138-8470-51b35af4420a)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Usando el buscador:
 
-## Further help
+![image](https://github.com/jesusaraujo06/PTEI.Frontend.Exercise1/assets/72844628/0481e979-63ab-45fd-92b9-2e22eda7d27e)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Consideraciones
+- Se utilizó Angular Material y Bootstrap para el diseño
+
+## Pendiente o por mejorar
+- Aplicar debounce al buscar una pelicula en el campo de busqueda
+- Mejorar el diseño
+- Implementar páginación o InfiniteScroll
+
+## **Descripción de la prueba técnica**
+**Ejercicio práctico**
+En este ejercicio, se te pide que desarrolles una aplicación web SPA en Angular que consuma una
+API pública a través de peticiones POST. La aplicación debe permitir a los usuarios buscar y ver
+información sobre películas.
+
+**Requisitos**
+- La aplicación debe tener un formulario de búsqueda donde el usuario pueda ingresar el título de
+una película.
+- Al hacer clic en el botón de búsqueda, la aplicación debe realizar una petición POST a la API pública
+de The Movie DB (https://www.themoviedb.org/documentation/api) y mostrar los resultados en
+una lista.
+- Cada elemento de la lista debe incluir el título de la película, la fecha de estreno y la descripción.
+- La aplicación debe usar Angular Material para los componentes de la interfaz de usuario (botones,
+formularios, etc.).
+- La aplicación debe incluir validaciones en front para asegurarse de que el usuario ingrese un título
+válido en el formulario de búsqueda.
+
+**Entregables**
+- El código fuente de la aplicación en un repositorio de Git.
+- Un archivo README que explique cómo se puede ejecutar la aplicación y cualquier otra
+información relevante.
